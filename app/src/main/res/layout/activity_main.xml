@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CoinCollector"
+    android:orientation="vertical"
+    android:background="@drawable/backg"
+    >
+
+    <TextView
+        android:id="@+id/scoreLabel"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:text="Score : 0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingVertical="14dp"
+        android:layout_marginBottom="0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@android:color/white"
+        />
+    <TextView
+        android:id="@+id/totalLabel"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:text="Total : 0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingVertical="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@android:color/white"
+        />
+    <TextView
+        android:id="@+id/timeLabel"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:text="Time : 0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingVertical="10dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@android:color/white"
+        />
+
+
+
+    <FrameLayout
+        android:id="@+id/gameFrame"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/sprite"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/man"
+            android:visibility="invisible" />
+
+
+
+        <ImageView
+            android:id="@+id/coin"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/coin"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/heart"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/buttom_check"
+            android:layout_width="300dp"
+            android:layout_height="10dp"
+            android:layout_gravity="bottom" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/startLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Coin Collector"
+                android:textSize="24sp" />
+
+
+            <!-- style/Textappearance is an inheritance -->
+            <Button
+                android:id="@+id/button1"
+                style="@style/myStyle1.myStyle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:onClick="easyGame"
+                android:text="SwipeEasy"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/myStyle1.myStyle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:onClick="medGame"
+                android:text="SwipeMedium"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+
+
+
+            <Button
+                android:id="@+id/button5"
+                style="@style/myStyle1.myStyle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:onClick="easyGame2"
+                android:text="TapEasy"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <Button
+                android:id="@+id/button6"
+                style="@style/myStyle1.myStyle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:onClick="medGame2"
+                android:text="TapMedium"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/myStyle1.myStyle4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:onClick="exitGame"
+                android:text="Exit"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/tv_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="25dp"
+            android:background="#0000"
+            android:gravity="center"
+            android:src="@drawable/left"
+            android:scaleType="fitXY"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/tv_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:background="#0000"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/right"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout>
